@@ -17,7 +17,7 @@ import java.util.logging.Logger;
  * 
  * This program can run without the completion of Exercise 1B.
  * 
- * @author Junyang
+ * @author Shesha
  */
 public class RealEstateAgency {
     private String name;

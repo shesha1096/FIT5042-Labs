@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * The interface defines the common behaviours across all property repository implementation
  * 
- * @autor Eddie Leung
+ * @autor Shesha
  */
 public interface PropertyRepository {
 

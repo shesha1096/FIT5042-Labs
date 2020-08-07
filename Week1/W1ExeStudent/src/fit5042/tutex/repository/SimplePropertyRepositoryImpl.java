@@ -15,7 +15,7 @@ import java.util.List;
  * This class implements the PropertyRepository class. You will need to add the keyword
  * "implements" PropertyRepository. 
  * 
- * @author Junyang
+ * @author Shesha
  */
 public class SimplePropertyRepositoryImpl implements PropertyRepository {
 	private ArrayList<Property> properties;

@@ -4,7 +4,7 @@ import javax.ejb.Remote;
 /**
 * The interface defines the common behaviours across all monthly payment calculator implementation
 *
-* @author Eddie
+* @author Shesha
 */
 @Remote
 public interface MonthlyPaymentCalculator {

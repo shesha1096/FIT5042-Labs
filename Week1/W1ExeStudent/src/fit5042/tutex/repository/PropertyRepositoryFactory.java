@@ -15,7 +15,7 @@ import java.util.Properties;
  * TODO Exercise 1.3 Step 0 Understand this class. This class uses the design
  * pattern of a singleton and a factory.
  *
- * @author Eddie Leung
+ * @author Shesha
  */
 public class PropertyRepositoryFactory {
 

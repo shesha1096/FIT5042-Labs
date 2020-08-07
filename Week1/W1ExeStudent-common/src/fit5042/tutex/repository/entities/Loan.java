@@ -2,7 +2,7 @@ package fit5042.tutex.repository.entities;
 
 /**
 *
-* @author Eddie
+* @author Shesha
 */
 public class Loan {
 private double principle;
