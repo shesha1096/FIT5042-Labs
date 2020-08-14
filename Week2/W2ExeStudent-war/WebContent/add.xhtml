@@ -5,6 +5,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui"
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+     
     <h:head>
         <h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
         <h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
@@ -125,7 +126,7 @@
 	                           <f:convertNumber integerOnly="true"/>
 							</h:inputText>
                             <br/>
-                            <h:message for="soze" class="#{!size.valid ? 'label label-warning' : 'none'}" />
+                            <h:message for="size" class="#{!size.valid ? 'label label-warning' : 'none'}" />
                             </td>
                             
                     
@@ -175,7 +176,7 @@
                 
                 <h:commandButton id="submit" value="Submit" action="#{addProperty.addProperty(property)}" class="btn btn-primary" >
                 </h:commandButton>
-                <h:button value="Close" outcome="index" class="btn btn-primary">
+                <h:button value="Close" outcome="index" class="btn btn-danger">
             	</h:button>
             	
             </h:form>

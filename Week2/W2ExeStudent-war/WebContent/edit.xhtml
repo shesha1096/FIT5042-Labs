@@ -17,7 +17,7 @@
             </div>
 
             <h:form id="MyForm">
-                <table class="table table-bordered ">
+                <table class="table table-striped ">
 
                     <tr>
                         <td width ="150" valign="top">Id:</td>
@@ -69,14 +69,20 @@
 
                 </table>
 
-                <h:commandButton id="save" value="Save" action="#{propertyManagedBean.editProperty(propertyController.property)}"  class="btn btn-primary" >
+                <h:commandButton id="save" value="Save" action="#{propertyManagedBean.editProperty(propertyController.property)}"  class="btn btn-success" onclick="return confirmSave()" >
                     <f:param name="propertyID" value="#{propertyController.propertyId + 1}"/>
                 </h:commandButton>
-                <h:commandButton id="Close" value="Close" action="index.xhtml" class="btn btn-primary" >
+                <h:commandButton id="Close" value="Close" action="index.xhtml" class="btn btn-danger" >
                     <f:param name="propertyID" value="#{propertyController.propertyId + 1}"/>
                 </h:commandButton> 
             </h:form>
         </div>
     </h:body>
+    <script>
+	function confirmSave() {
+  	var r = confirm("Are you Sure?");
+  	return r;
+}
+	</script>
 </html>
 

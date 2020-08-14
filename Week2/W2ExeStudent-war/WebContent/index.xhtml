@@ -61,7 +61,7 @@
                                     <f:param name="propertyID"  value="#{status.index + 1}"></f:param> 
                                 </h:commandLink>
                                 
-                                <h:commandLink value="Delete" action="#{removeProperty.removeProperty(propertyApplication.properties.get(status.index).propertyId)}" disabled="#{propertyApplication.properties.get(status.index).propertyId == null}">                                
+                                <h:commandLink value="Delete" action="#{removeProperty.removeProperty(propertyApplication.properties.get(status.index).propertyId)}" disabled="#{propertyApplication.properties.get(status.index).propertyId == null}" style="color:red;" onclick="return pressDelete()">                                
                                 	<f:param name="propertyID" value="#{propertyController.propertyId+1}"/>
                                 	
                                 </h:commandLink>
@@ -79,7 +79,7 @@
                     <h:commandButton id="add" value="Add" action="add.xhtml" class="btn btn-primary" >
                     </h:commandButton>
                 
-                    <h:commandButton id="viewAll" value="View All" action="#{searchProperty.searchAll()}" class="btn btn-primary" >
+                    <h:commandButton id="viewAll" value="View All" action="#{searchProperty.searchAll()}" class="btn btn-success" >
                     </h:commandButton>
                 </div>
                 
@@ -87,5 +87,11 @@
             </h:form>
         </div>
     </h:body>
+    <script>
+	function pressDelete() {
+  	var r = confirm("Are you Sure?");
+  	return r;
+}
+</script>
 </html>
 
