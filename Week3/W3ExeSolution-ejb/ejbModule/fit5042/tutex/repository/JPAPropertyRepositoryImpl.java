@@ -7,6 +7,7 @@ import java.util.Set;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.enterprise.context.Dependent;
 import javax.faces.annotation.ManagedProperty;
 
 import java.util.logging.Level;

@@ -18,11 +18,14 @@ import fit5042.tutex.calculator.MonthlyPaymentCalculator;
  * @author: originally created by Eddie. The following code has been changed in
  * order for students to practice.
  */
-@ManagedBean(name = "loanManagedBean")
+@ManagedBean(name = "loanManagedBean", eager = true)
+@SessionScoped
 public class LoanManagedBean implements Serializable {
 
     
 	private Loan loan;
+	@EJB
+	private MonthlyPaymentCalculator monthlyPaymentCalculator;
 
     public LoanManagedBean() {
         this.loan = new Loan();
@@ -43,7 +46,8 @@ public class LoanManagedBean implements Serializable {
         //You will need to modify the monthlyPayment value and set it as the monthly payment attribute value into the loan instance
         //Please complete this method starts from here
         
-        
+        monthlyPayment = monthlyPaymentCalculator.calculate(loan.getPrinciple(),loan.getNumberOfYears(),loan.getInterestRate());
+        this.loan.setMonthlyPayment(monthlyPayment);
         return "index";
     }
 }
