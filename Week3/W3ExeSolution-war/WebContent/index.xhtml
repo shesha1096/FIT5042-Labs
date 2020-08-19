@@ -124,8 +124,9 @@
                     <tr>
                         <td width="180">Principle(click on property):</td>
                         <td width="320">
-                            <h:inputText id="principle" value="#{loanManagedBean.loan.principle}">
+                            <h:inputText id="principle" value="#{loanManagedBean.loan.principle}" validatorMessage="The principle amount must larger than $1000">
                                 <f:converter converterId="javax.faces.Double" />
+                                <f:validateLongRange minimum="1000"/>
                             </h:inputText>
                         </td>
                         <td>
@@ -159,8 +160,9 @@
                     </tr>
                     <tr>
                         <td>Number of Years: </td>
-                        <td><h:inputText id="numberOfYears" value="#{loanManagedBean.loan.numberOfYears}">
+                        <td><h:inputText id="numberOfYears" value="#{loanManagedBean.loan.numberOfYears}" validatorMessage="The number of years must be a minimum of 1 year.">
                                 <f:converter converterId="javax.faces.Integer" />
+                                <f:validateLongRange minimum="1"/>
                             </h:inputText></td>
                         <td>
 

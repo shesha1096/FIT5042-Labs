@@ -190,7 +190,7 @@ public class PropertyManagedBean implements Serializable {
     
     public String bestPerRoom()
     {
-        bestPerRoom = compareProperty.bestPerRoom();
+        bestPerRoom = compareProperty.getBestPerRoom();
         return "index";
     }
     

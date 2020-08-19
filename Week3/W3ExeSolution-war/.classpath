@@ -15,5 +15,6 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/W3ExeSolution-common"/>
 	<classpathentry kind="lib" path="D:/Semester 3/FIT5042- Enterprise Application Development for the Web/javaee-api-7.0.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/W3ExeSolution-ejb"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
