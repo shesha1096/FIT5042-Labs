@@ -82,6 +82,6 @@ public class JPAPropertyRepositoryImpl implements PropertyRepository {
     	CriteriaQuery<Property> criteriaQuery = criteriaBuilder.createQuery(Property.class);
     	Root<Property> property = criteriaQuery.from(Property.class);
     	criteriaQuery.select(property).where(criteriaBuilder.lessThanOrEqualTo(property.get("price").as(Double.class),budget));
-    	return ((EntityManager) criteriaQuery).createQuery(criteriaQuery).getResultList();
+    	return  entityManager.createQuery(criteriaQuery).getResultList();
     }
 }
